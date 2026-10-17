@@ -46,6 +46,24 @@
     .scroll-target {
       scroll-margin-top: 5.05rem;
     }
+
+    /* אנימציית תנועה חלקה אינסופית לסטריפ הלוגואים */
+    @keyframes marquee {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(50%);
+      }
+    }
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      animation: marquee 25s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
   </style>
 </head>
 <body class="min-h-screen flex flex-col antialiased selection:bg-brand-lime selection:text-brand-navy relative">
@@ -193,7 +211,7 @@
                   03
                 </div>
                 <h3 class="text-xl sm:text-2xl font-bold font-display text-brand-navy">
-                  ליווי צוותים וייעוץ 1:1
+                  ליווי צוותי מנהלים / מנהל וצוותו / מנהלים 1:1
                 </h3>
               </div>
               <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
@@ -292,6 +310,74 @@
       </div>
     </section>
 
+    <!-- סקשן סטריפ לוגואים נעים (Clients Marquee Strip) -->
+    <section class="py-10 bg-[#eaf1f5] overflow-hidden border-t border-slate-300/60 relative">
+      <div class="max-w-7xl mx-auto px-4 mb-6 text-center">
+        <p class="text-xs sm:text-sm font-bold uppercase tracking-widest text-slate-500">
+          ארגונים וחברות שצועדים איתנו
+        </p>
+      </div>
+
+      <!-- מיכל הגלילה עם מעברי Fade בצדדים -->
+      <div class="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
+        <div class="animate-marquee flex items-center gap-10 sm:gap-14 py-2">
+          
+          <!-- סט ראשון של לוגואים / שמות ארגונים -->
+          <div class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/70 border border-slate-300/70 shadow-sm text-slate-700 font-bold font-display text-base tracking-wide whitespace-nowrap hover:bg-white hover:text-brand-blue transition-colors">
+            <span class="w-2.5 h-2.5 rounded-full bg-brand-teal inline-block"></span>
+            ארגון מוביל 01
+          </div>
+          <div class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/70 border border-slate-300/70 shadow-sm text-slate-700 font-bold font-display text-base tracking-wide whitespace-nowrap hover:bg-white hover:text-brand-blue transition-colors">
+            <span class="w-2.5 h-2.5 rounded-full bg-brand-limeDark inline-block"></span>
+            חברת הייטק וטכנולוגיה
+          </div>
+          <div class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/70 border border-slate-300/70 shadow-sm text-slate-700 font-bold font-display text-base tracking-wide whitespace-nowrap hover:bg-white hover:text-brand-blue transition-colors">
+            <span class="w-2.5 h-2.5 rounded-full bg-brand-blue inline-block"></span>
+            קבוצת שירותים פיננסיים
+          </div>
+          <div class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/70 border border-slate-300/70 shadow-sm text-slate-700 font-bold font-display text-base tracking-wide whitespace-nowrap hover:bg-white hover:text-brand-blue transition-colors">
+            <span class="w-2.5 h-2.5 rounded-full bg-brand-teal inline-block"></span>
+            חברה תעשייתית גלובלית
+          </div>
+          <div class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/70 border border-slate-300/70 shadow-sm text-slate-700 font-bold font-display text-base tracking-wide whitespace-nowrap hover:bg-white hover:text-brand-blue transition-colors">
+            <span class="w-2.5 h-2.5 rounded-full bg-brand-limeDark inline-block"></span>
+            ארגון בריאות ומדע
+          </div>
+          <div class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/70 border border-slate-300/70 shadow-sm text-slate-700 font-bold font-display text-base tracking-wide whitespace-nowrap hover:bg-white hover:text-brand-blue transition-colors">
+            <span class="w-2.5 h-2.5 rounded-full bg-brand-navy inline-block"></span>
+            גוף ציבורי וביטחוני
+          </div>
+
+          <!-- סט שני משוכפל כדי לייצר רצף אינסופי מושלם -->
+          <div class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/70 border border-slate-300/70 shadow-sm text-slate-700 font-bold font-display text-base tracking-wide whitespace-nowrap hover:bg-white hover:text-brand-blue transition-colors">
+            <span class="w-2.5 h-2.5 rounded-full bg-brand-teal inline-block"></span>
+            ארגון מוביל 01
+          </div>
+          <div class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/70 border border-slate-300/70 shadow-sm text-slate-700 font-bold font-display text-base tracking-wide whitespace-nowrap hover:bg-white hover:text-brand-blue transition-colors">
+            <span class="w-2.5 h-2.5 rounded-full bg-brand-limeDark inline-block"></span>
+            חברת הייטק וטכנולוגיה
+          </div>
+          <div class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/70 border border-slate-300/70 shadow-sm text-slate-700 font-bold font-display text-base tracking-wide whitespace-nowrap hover:bg-white hover:text-brand-blue transition-colors">
+            <span class="w-2.5 h-2.5 rounded-full bg-brand-blue inline-block"></span>
+            קבוצת שירותים פיננסיים
+          </div>
+          <div class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/70 border border-slate-300/70 shadow-sm text-slate-700 font-bold font-display text-base tracking-wide whitespace-nowrap hover:bg-white hover:text-brand-blue transition-colors">
+            <span class="w-2.5 h-2.5 rounded-full bg-brand-teal inline-block"></span>
+            חברה תעשייתית גלובלית
+          </div>
+          <div class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/70 border border-slate-300/70 shadow-sm text-slate-700 font-bold font-display text-base tracking-wide whitespace-nowrap hover:bg-white hover:text-brand-blue transition-colors">
+            <span class="w-2.5 h-2.5 rounded-full bg-brand-limeDark inline-block"></span>
+            ארגון בריאות ומדע
+          </div>
+          <div class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/70 border border-slate-300/70 shadow-sm text-slate-700 font-bold font-display text-base tracking-wide whitespace-nowrap hover:bg-white hover:text-brand-blue transition-colors">
+            <span class="w-2.5 h-2.5 rounded-full bg-brand-navy inline-block"></span>
+            גוף ציבורי וביטחוני
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="scroll-target py-16 sm:py-24 bg-white border-t border-slate-200">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
@@ -339,7 +425,7 @@
     </div>
   </footer>
 
-  <!-- כפתור וואטסאפ צף קבוע בתחתית המסך (שמאל) - מתוקן ומדויק -->
+  <!-- כפתור וואטסאפ צף קבוע בתחתית המסך (שמאל) -->
   <a 
     href="https://wa.me/972543904231?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%99%D7%95%D7%91%D7%9C%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%91%D7%A0%D7%95%D7%92%D7%A2%20%D7%9C%D7%94%D7%9B%D7%A9%D7%A8%D7%AA%20%D7%9E%D7%A0%D7%94%D7%9C%D7%99%D7%9D%20%D7%A6%D7%A2%D7%99%D7%A8%D7%99%D7%9D" 
     target="_blank" 
@@ -347,11 +433,9 @@
     class="fixed bottom-6 left-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-2xl hover:bg-[#20ba59] hover:scale-110 active:scale-95 transition-all duration-300 group"
     aria-label="דברו איתנו בוואטסאפ"
   >
-    <!-- אייקון וואטסאפ רשמי ומדויק -->
     <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
       <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.69C7.02 10.9 7.9 12.07 8.02 12.23C8.15 12.4 9.74 14.85 12.19 15.91C12.78 16.16 13.23 16.31 13.59 16.43C14.18 16.62 14.72 16.59 15.15 16.53C15.63 16.46 16.63 15.92 16.84 15.33C17.05 14.74 17.05 14.23 16.99 14.13C16.92 14.03 16.76 13.97 16.51 13.84C16.27 13.72 15.06 13.13 14.83 13.04C14.61 12.96 14.44 12.92 14.28 13.17C14.12 13.41 13.65 13.97 13.51 14.13C13.37 14.29 13.23 14.31 12.98 14.19C12.74 14.07 11.96 13.81 11.03 12.98C10.3 12.33 9.82 11.53 9.67 11.28C9.53 11.04 9.65 10.9 9.78 10.78C9.89 10.67 10.03 10.49 10.15 10.34C10.28 10.2 10.32 10.09 10.4 9.93C10.48 9.77 10.44 9.63 10.38 9.51C10.32 9.39 9.85 8.23 9.65 7.76C9.46 7.29 9.27 7.36 9.13 7.35C8.99 7.34 8.83 7.34 8.53 7.33Z"/>
     </svg>
-    <!-- תווית עזר קטנה במעבר עכבר בדסקטופ -->
     <span class="absolute left-16 bg-slate-800 text-white text-xs font-semibold px-2.5 py-1.5 rounded-lg shadow-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none hidden sm:inline-block">
       ווטסאפ מהיר
     </span>
