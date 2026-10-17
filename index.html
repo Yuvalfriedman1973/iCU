@@ -48,7 +48,7 @@
     }
   </style>
 </head>
-<body class="min-h-screen flex flex-col antialiased selection:bg-brand-lime selection:text-brand-navy">
+<body class="min-h-screen flex flex-col antialiased selection:bg-brand-lime selection:text-brand-navy relative">
 
   <!-- Header ללא לוגו (עם אלמנט מאזן משמאל) -->
   <header class="sticky top-0 z-50 bg-[#d5e3ec]/95 backdrop-blur-md border-b border-slate-300 shadow-sm transition-all duration-200">
@@ -113,7 +113,7 @@
           
           <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-3 sm:p-6 shadow-sm border border-slate-200/80 transition-all hover:shadow-md">
             <div class="text-xl sm:text-4xl font-black font-display text-brand-navy mb-1">100%</div>
-            <div class="text-xs sm:text-sm font-medium text-slate-600">מותאם שטח ודנ״א</div>
+            <div class="text-xs sm:text-sm font-medium text-slate-600">מותאם שטח ודנ״א ארגוני</div>
           </div>
 
           <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-3 sm:p-6 shadow-sm border border-slate-200/80 transition-all hover:shadow-md">
@@ -295,12 +295,11 @@
     <!-- Contact Section -->
     <section id="contact" class="scroll-target py-16 sm:py-24 bg-white border-t border-slate-200">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-        <h2 class="text-3xl sm:text-4xl font-bold font-display text-brand-navy mb-4">
-          מוכנים להצמיח את המנהלים הבאים שלכם
-        </h2>
-        <p class="text-slate-600 text-lg mb-8">
+        
+        <!-- משפט פתיחה מוגדל ומודגש -->
+        <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold font-display text-brand-navy leading-snug mb-8">
           השאירו פרטים ונחזור אליכם לשיחת היכרות ואבחון צרכים ראשונית ללא התחייבות
-        </p>
+        </h2>
 
         <form class="space-y-4 text-right max-w-xl mx-auto" onsubmit="event.preventDefault(); alert('הפרטים נשלחו בהצלחה! ניצור עמכם קשר בהקדם.');">
           <div>
@@ -339,6 +338,25 @@
       </div>
     </div>
   </footer>
+
+  <!-- כפתור וואטסאפ צף קבוע בתחתית המסך (שמאל) -->
+  <a 
+    href="https://wa.me/972543904231?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%99%D7%95%D7%91%D7%9C%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%91%D7%A0%D7%95%D7%92%D7%A2%20%D7%9C%D7%94%D7%9B%D7%A9%D7%A8%D7%AA%20%D7%9E%D7%A0%D7%94%D7%9C%D7%99%D7%9D%20%D7%A6%D7%A2%D7%99%D7%A8%D7%99%D7%9D" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="fixed bottom-6 left-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-2xl hover:bg-[#20ba59] hover:scale-110 active:scale-95 transition-all duration-300 group"
+    aria-label="דברו איתנו בוואטסאפ"
+  >
+    <!-- אייקון וואטסאפ רשמי וקטורי SVG -->
+    <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.54 1.772.82 2.791.82 3.181 0 5.768-2.587 5.768-5.766.001-3.182-2.585-5.806-5.768-5.806zm3.377 8.204c-.14.394-.814.729-1.127.766-.312.036-.713.065-2.05-.487-1.338-.553-2.185-1.92-2.253-2.012-.069-.092-.549-.731-.549-1.396 0-.665.348-.992.472-1.12.124-.128.271-.16.363-.16.091 0 .183.001.262.005.083.004.195-.031.305.234.114.275.39.95.424 1.02.034.069.057.151.011.243-.046.092-.069.149-.138.229-.069.08-.145.179-.207.24-.069.069-.141.144-.06.284.08.14.357.59.767.954.527.469.972.614 1.11.683.137.069.218.057.3-.036.082-.093.35-.407.443-.547.092-.14.184-.117.308-.071.124.046.786.37 9.21.437.135.067.225.101.258.156.033.056.033.323-.107.717z"/>
+      <path d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 1.764.459 3.424 1.263 4.872L2 22l5.283-1.229c1.408.749 3.011 1.18 4.718 1.18 5.523 0 10-4.478 10-10 0-5.523-4.477-9.949-10-9.949zm0 18.15c-1.528 0-2.957-.42-4.187-1.151l-.3-.178-3.111.724.832-3.04-.195-.312c-.789-1.259-1.206-2.73-1.206-4.193 0-4.502 3.664-8.167 8.167-8.167 4.503 0 8.167 3.665 8.167 8.167 0 4.502-3.664 8.15-8.167 8.15z"/>
+    </svg>
+    <!-- תווית עזר קטנה במעבר עכבר בדסקטופ -->
+    <span class="absolute left-16 bg-slate-800 text-white text-xs font-semibold px-2.5 py-1.5 rounded-lg shadow-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none hidden sm:inline-block">
+      ווטסאפ מהיר
+    </span>
+  </a>
 
   <!-- Script for Mobile Menu Toggle -->
   <script>
