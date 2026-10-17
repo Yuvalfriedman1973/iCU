@@ -47,13 +47,13 @@
       scroll-margin-top: 5.05rem;
     }
 
-    /* אנימציית תנועה חלקה אינסופית לסטריפ הלוגואים */
+    /* אנימציית תנועה חלקה אינסופית לכיוון הנגדי */
     @keyframes marquee {
       0% {
         transform: translateX(0%);
       }
       100% {
-        transform: translateX(50%);
+        transform: translateX(-50%);
       }
     }
     .animate-marquee {
@@ -310,7 +310,7 @@
       </div>
     </section>
 
-    <!-- סקשן סטריפ לוגואים נעים - עם רקע חי ורענן בגרדיאנט ירקרק-תכלכל -->
+    <!-- סקשן סטריפ לוגואים נעים - תנועה בכיוון הנגדי -->
     <section class="py-12 bg-gradient-to-r from-[#dcfce7] via-[#e0f2fe] to-[#ddf3cf] overflow-hidden border-y border-[#bbf7d0]/80 shadow-inner relative">
       <div class="max-w-7xl mx-auto px-4 mb-6 text-center">
         <p class="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-brand-navy/70">
