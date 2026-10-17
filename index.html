@@ -46,11 +46,16 @@
     .scroll-target {
       scroll-margin-top: 5.05rem;
     }
+    /* פֿאַרוואַנדלען דעם ווײַסן הינטערגרונט אין דורכזיכטיק */
+    .transparent-logo {
+      mix-blend-mode: multiply;
+      isolation: isolate;
+    }
   </style>
 </head>
 <body class="min-h-screen flex flex-col antialiased selection:bg-brand-lime selection:text-brand-navy">
 
-  <!-- Header עם רקע מובחן (#d5e3ec) ולוגו מוגדל ומוטמע היטב בשמאל -->
+  <!-- Header מיט דורכזיכטיקן לאָגאָ אויף דער לינקער זײַט -->
   <header class="sticky top-0 z-50 bg-[#d5e3ec]/95 backdrop-blur-md border-b border-slate-300 shadow-sm transition-all duration-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative">
       
@@ -70,7 +75,7 @@
         </nav>
       </div>
 
-      <!-- Center: Brand Title ממורכז -->
+      <!-- Center: Brand Title צענטרירט -->
       <div class="absolute left-1/2 -translate-x-1/2 text-center pointer-events-auto">
         <a href="#" class="inline-block">
           <span class="block font-display font-black text-xl sm:text-2xl tracking-wider text-brand-navy">YOUNG LEADERS</span>
@@ -78,12 +83,12 @@
         </a>
       </div>
 
-      <!-- Left: לוגו ICU המקורי - מוגדל וממוזג ללא ריבוע לבן -->
-      <div class="flex items-center justify-end z-10 overflow-visible">
+      <!-- Left: לאָגאָ אָן דעם ווײַסן קעסטל (דורכזיכטיק געמאַכט דורך mix-blend-multiply) -->
+      <div class="flex items-center justify-end z-10">
         <img 
           src="logo-icu.png" 
           alt="ICU ייעוץ ארגוני הנחיית קבוצות" 
-          class="h-16 sm:h-20 w-auto object-contain mix-blend-multiply scale-125 origin-left"
+          class="transparent-logo h-16 sm:h-20 w-auto object-contain scale-125 origin-left"
         />
       </div>
 
@@ -112,7 +117,7 @@
           הכשרות פרקטיות, ממוקדות ומותאמות לשטח, שמגשרות על הפער שבין ביצוע מצטיין לניהול והובלת אנשים: במעבר מעובדים מצטיינים למנהלים מצטיינים
         </p>
 
-        <!-- 3 ריבועי נתונים בשורה אחת -->
+        <!-- 3 קעסטלעך אינפֿאָרמאַציע -->
         <div class="grid grid-cols-3 gap-2 sm:gap-6 max-w-3xl mx-auto">
           
           <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-3 sm:p-6 shadow-sm border border-slate-200/80 transition-all hover:shadow-md">
@@ -135,11 +140,10 @@
       </div>
     </section>
 
-    <!-- Services Section עם רקע פסטלי (#ddf3cf) -->
+    <!-- Services Section -->
     <section id="services" class="scroll-target py-16 sm:py-24 bg-[#ddf3cf] border-y border-[#cbe8bb] transition-colors duration-300">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         
-        <!-- אליפסת "סל הפתרונות" צרה ומהודקת -->
         <div class="flex justify-center mb-5">
           <div class="inline-flex items-center justify-center px-10 py-1.5 sm:py-2 rounded-full bg-white/80 backdrop-blur-md border border-white/90 shadow-md text-brand-navy font-display text-2xl sm:text-3xl font-extrabold tracking-wide">
             סל הפתרונות
@@ -152,7 +156,6 @@
           </h2>
         </div>
 
-        <!-- רשת 4 כרטיסים קומפקטיים (המספר בצד ימין צמוד לכותרת) -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           
           <!-- Card 01 -->
@@ -232,7 +235,6 @@
     <section id="methodology" class="scroll-target py-16 sm:py-24 bg-brand-navy text-white text-center">
       <div class="max-w-4xl mx-auto px-4 sm:px-6">
         
-        <!-- אליפסת "המתודולוגיה" צרה ומהודקת -->
         <div class="flex justify-center mb-6">
           <div class="inline-flex items-center justify-center px-10 py-2 sm:py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg text-brand-lime font-display text-2xl sm:text-3xl font-extrabold tracking-wide">
             המתודולוגיה
@@ -277,7 +279,7 @@
       </div>
     </section>
 
-    <!-- About Section - יובל פרידמן -->
+    <!-- About Section -->
     <section id="about" class="scroll-target py-16 sm:py-24 bg-[#eaf1f5]">
       <div class="max-w-4xl mx-auto px-4 sm:px-6">
         <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-slate-200">
