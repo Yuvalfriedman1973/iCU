@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl" class="scroll-smooth">
+<html lang="he" dir="rtl" class="scroll-smooth" style="scroll-padding-top: 5.05rem;">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YOUNG LEADERS - פיתוח והכשרת מנהלים צעירים</title>
+  <title>אתר עסקי מלא - YOUNG LEADERS</title>
   
-  <!-- Google Fonts: Assistant & Heebo -->
+  <!-- Fonts: Assistant & Heebo -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Heebo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -37,12 +37,7 @@
       }
     }
   </script>
-  
   <style>
-    html {
-      /* היסט גלילה מותאם בדיוק לגובה ההדר - הכותרות נראות במלואן וכמעט צמודות לפס התחתון */
-      scroll-padding-top: 5.05rem;
-    }
     body {
       background-color: #eaf1f5;
       font-family: 'Assistant', sans-serif;
@@ -55,19 +50,19 @@
 </head>
 <body class="min-h-screen flex flex-col antialiased selection:bg-brand-lime selection:text-brand-navy">
 
-  <!-- Header דביק עם רקע #d5e3ec -->
+  <!-- Header עם רקע מובחן (#d5e3ec) -->
   <header class="sticky top-0 z-50 bg-[#d5e3ec]/95 backdrop-blur-md border-b border-slate-300 shadow-sm transition-all duration-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative">
       
-      <!-- Right: תפריט ניווט לדסקטופ וכפתור המבורגר למובייל -->
+      <!-- Right: Navigation Menu (Desktop) & Hamburger (Mobile) -->
       <div class="flex items-center gap-4">
-        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-800 hover:bg-slate-300/60 focus:outline-none" aria-label="פתח תפריט">
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-300/60 focus:outline-none" aria-label="פתח תפריט">
           <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
 
-        <nav class="hidden md:flex items-center gap-7 text-base font-semibold text-slate-800">
+        <nav class="hidden md:flex items-center gap-8 text-base font-semibold text-slate-700">
           <a href="#about" class="hover:text-brand-blue transition-colors">אודות</a>
           <a href="#services" class="hover:text-brand-blue transition-colors">סל הפתרונות</a>
           <a href="#methodology" class="hover:text-brand-blue transition-colors">המתודולוגיה</a>
@@ -75,7 +70,7 @@
         </nav>
       </div>
 
-      <!-- Center: שם המותג ממורכז במדויק -->
+      <!-- Center: Brand Title ממורכז ללא סמליל -->
       <div class="absolute left-1/2 -translate-x-1/2 text-center pointer-events-auto">
         <a href="#" class="inline-block">
           <span class="block font-display font-black text-xl sm:text-2xl tracking-wider text-brand-navy">YOUNG LEADERS</span>
@@ -83,56 +78,23 @@
         </a>
       </div>
 
-      <!-- Left: לוגו iCU מובנה ומושלם ב-SVG (העין/דמות עם מעבר גוונים כחול-צהוב-ירוק והטקסטים) -->
+      <!-- Left: לוגו ICU המקורי שהעלית ל-GitHub -->
       <div class="flex items-center justify-end z-10">
-        <div class="flex items-center gap-2 select-none">
-          <svg class="h-10 sm:h-12 w-auto" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="icuBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#1e70a2" />
-                <stop offset="50%" stop-color="#134e7a" />
-                <stop offset="100%" stop-color="#0c3258" />
-              </linearGradient>
-              <linearGradient id="icuYellowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#8fd443" />
-                <stop offset="60%" stop-color="#d4e137" />
-                <stop offset="100%" stop-color="#f5e042" />
-              </linearGradient>
-              <radialGradient id="pupilGrad" cx="40%" cy="40%" r="65%">
-                <stop offset="0%" stop-color="#55c1d9" />
-                <stop offset="55%" stop-color="#2478a8" />
-                <stop offset="90%" stop-color="#c9df38" />
-              </radialGradient>
-            </defs>
-            <!-- Eyebrow swoosh -->
-            <path d="M 22 47 C 38 32, 70 30, 96 46 C 78 40, 52 42, 38 49 C 28 54, 24 53, 22 47 Z" fill="#247da8" />
-            <path d="M 34 46 C 54 36, 76 37, 95 46 C 75 42, 55 42, 40 48 Z" fill="url(#icuYellowGrad)" />
-            <!-- Eye pupil ring -->
-            <ellipse cx="48" cy="51" rx="13" ry="12" fill="url(#pupilGrad)" />
-            <circle cx="45" cy="49" r="6" fill="#13476d" />
-            <circle cx="43" cy="46" r="2.2" fill="#ffffff" />
-            <!-- Dynamic human body -->
-            <path d="M 23 48 C 30 58, 35 70, 31 92 C 28 102, 23 116, 35 120 C 37 114, 38 103, 49 97 C 62 90, 80 97, 102 103 C 78 86, 68 76, 68 62 C 69 57, 72 53, 79 48 C 65 59, 58 63, 44 65 C 33 66, 27 58, 23 48 Z" fill="url(#icuBlueGrad)" />
-            <!-- Yellow accent on right wing and left curve -->
-            <path d="M 68 60 C 68 72, 73 80, 84 89 C 78 78, 73 70, 71 58 Z" fill="url(#icuYellowGrad)" />
-            <path d="M 26 104 C 33 113, 38 116, 47 108 C 40 108, 35 106, 26 104 Z" fill="url(#icuYellowGrad)" />
-          </svg>
-          <div class="flex flex-col text-right leading-none">
-            <span class="font-display font-black text-2xl sm:text-3xl text-[#5b6369] tracking-tight -mb-0.5">iCU</span>
-            <span class="text-[9px] sm:text-[10px] font-bold text-[#5b6369] tracking-tight">ייעוץ ארגוני</span>
-            <span class="text-[9px] sm:text-[10px] font-bold text-[#5b6369] tracking-tight">הנחיית קבוצות</span>
-          </div>
-        </div>
+        <img 
+          src="logo-icu.png" 
+          alt="ICU ייעוץ ארגוני הנחיית קבוצות" 
+          class="h-11 sm:h-14 w-auto object-contain mix-blend-multiply"
+        />
       </div>
 
     </div>
 
     <!-- Mobile Dropdown Menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-[#d5e3ec] border-b border-slate-300 px-6 py-4 space-y-3 shadow-lg">
-      <a href="#about" class="block py-2 text-base font-semibold text-slate-800 hover:text-brand-blue">אודות</a>
-      <a href="#services" class="block py-2 text-base font-semibold text-slate-800 hover:text-brand-blue">סל הפתרונות</a>
-      <a href="#methodology" class="block py-2 text-base font-semibold text-slate-800 hover:text-brand-blue">המתודולוגיה</a>
-      <a href="#contact" class="block py-2 text-base font-semibold text-slate-800 hover:text-brand-blue">צור קשר</a>
+      <a href="#about" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-blue">אודות</a>
+      <a href="#services" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-blue">סל הפתרונות</a>
+      <a href="#methodology" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-blue">המתודולוגיה</a>
+      <a href="#contact" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-blue">צור קשר</a>
     </div>
   </header>
 
@@ -150,7 +112,7 @@
           הכשרות פרקטיות, ממוקדות ומותאמות לשטח, שמגשרות על הפער שבין ביצוע מצטיין לניהול והובלת אנשים: במעבר מעובדים מצטיינים למנהלים מצטיינים
         </p>
 
-        <!-- 3 ריבועי נתונים בשורה אחת (3 עמודות גם במובייל) -->
+        <!-- 3 ריבועי נתונים בשורה אחת -->
         <div class="grid grid-cols-3 gap-2 sm:gap-6 max-w-3xl mx-auto">
           
           <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-3 sm:p-6 shadow-sm border border-slate-200/80 transition-all hover:shadow-md">
@@ -159,7 +121,7 @@
           </div>
 
           <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-3 sm:p-6 shadow-sm border border-slate-200/80 transition-all hover:shadow-md">
-            <div class="text-xl sm:text-4xl font-black font-display text-brand-navy mb-1">0-2</div>
+            <div class="text-xl sm:text-4xl font-black font-display text-brand-navy mb-1">2–0</div>
             <div class="text-xs sm:text-sm font-medium text-slate-600">שנות ניסיון ניהולי</div>
           </div>
 
@@ -173,32 +135,31 @@
       </div>
     </section>
 
-    <!-- Section: סל הפתרונות (#services) עם רקע #ddf3cf -->
+    <!-- Services Section עם רקע פסטלי (#ddf3cf) -->
     <section id="services" class="scroll-target py-16 sm:py-24 bg-[#ddf3cf] border-y border-[#cbe8bb] transition-colors duration-300">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         
-        <!-- אליפסה צרה ומהודקת אנכית -->
+        <!-- אליפסת "סל הפתרונות" צרה ומהודקת -->
         <div class="flex justify-center mb-5">
           <div class="inline-flex items-center justify-center px-10 py-1.5 sm:py-2 rounded-full bg-white/80 backdrop-blur-md border border-white/90 shadow-md text-brand-navy font-display text-2xl sm:text-3xl font-extrabold tracking-wide">
             סל הפתרונות
           </div>
         </div>
 
-        <!-- כותרת משנה ללא נקודה -->
         <div class="text-center mb-12 sm:mb-16">
           <h2 class="text-2xl sm:text-3xl font-medium font-sans text-brand-navy">
             המענה המדויק לצרכים שלכם
           </h2>
         </div>
 
-        <!-- 4 כרטיסים קומפקטיים (2x2 בדסקטופ, טור במובייל) -->
+        <!-- רשת 4 כרטיסים קומפקטיים (המספר בצד ימין צמוד לכותרת) -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           
           <!-- Card 01 -->
           <div class="bg-white rounded-3xl p-5 sm:p-6 border border-white/60 shadow-sm flex flex-col justify-between hover:shadow-xl transition-all">
             <div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="w-10 h-10 rounded-2xl bg-[#ddf3cf] text-brand-navy flex items-center justify-center font-bold text-base flex-shrink-0">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-2xl bg-[#ddf3cf] text-brand-navy flex items-center justify-center font-bold text-lg flex-shrink-0">
                   01
                 </div>
                 <h3 class="text-xl sm:text-2xl font-bold font-display text-brand-navy">
@@ -214,8 +175,8 @@
           <!-- Card 02 -->
           <div class="bg-white rounded-3xl p-5 sm:p-6 border border-white/60 shadow-sm flex flex-col justify-between hover:shadow-xl transition-all">
             <div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="w-10 h-10 rounded-2xl bg-[#ddf3cf] text-brand-navy flex items-center justify-center font-bold text-base flex-shrink-0">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-2xl bg-[#ddf3cf] text-brand-navy flex items-center justify-center font-bold text-lg flex-shrink-0">
                   02
                 </div>
                 <h3 class="text-xl sm:text-2xl font-bold font-display text-brand-navy">
@@ -231,8 +192,8 @@
           <!-- Card 03 -->
           <div class="bg-white rounded-3xl p-5 sm:p-6 border border-white/60 shadow-sm flex flex-col justify-between hover:shadow-xl transition-all">
             <div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="w-10 h-10 rounded-2xl bg-[#ddf3cf] text-brand-navy flex items-center justify-center font-bold text-base flex-shrink-0">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-2xl bg-[#ddf3cf] text-brand-navy flex items-center justify-center font-bold text-lg flex-shrink-0">
                   03
                 </div>
                 <h3 class="text-xl sm:text-2xl font-bold font-display text-brand-navy">
@@ -248,8 +209,8 @@
           <!-- Card 04 -->
           <div class="bg-white rounded-3xl p-5 sm:p-6 border border-white/60 shadow-sm flex flex-col justify-between hover:shadow-xl transition-all">
             <div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="w-10 h-10 rounded-2xl bg-[#ddf3cf] text-brand-navy flex items-center justify-center font-bold text-base flex-shrink-0">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-2xl bg-[#ddf3cf] text-brand-navy flex items-center justify-center font-bold text-lg flex-shrink-0">
                   04
                 </div>
                 <h3 class="text-xl sm:text-2xl font-bold font-display text-brand-navy">
@@ -267,13 +228,13 @@
       </div>
     </section>
 
-    <!-- Section: המתודולוגיה (#methodology) עם רקע כהה (#09233b) -->
+    <!-- Methodology Section -->
     <section id="methodology" class="scroll-target py-16 sm:py-24 bg-brand-navy text-white text-center">
       <div class="max-w-4xl mx-auto px-4 sm:px-6">
         
-        <!-- אליפסה צרה ומהודקת -->
+        <!-- אליפסת "המתודולוגיה" צרה ומהודקת -->
         <div class="flex justify-center mb-6">
-          <div class="inline-flex items-center justify-center px-10 py-1.5 sm:py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg text-brand-lime font-display text-2xl sm:text-3xl font-extrabold tracking-wide">
+          <div class="inline-flex items-center justify-center px-10 py-2 sm:py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg text-brand-lime font-display text-2xl sm:text-3xl font-extrabold tracking-wide">
             המתודולוגיה
           </div>
         </div>
@@ -316,7 +277,7 @@
       </div>
     </section>
 
-    <!-- Section: אודות (#about) - יובל פרידמן -->
+    <!-- About Section - יובל פרידמן -->
     <section id="about" class="scroll-target py-16 sm:py-24 bg-[#eaf1f5]">
       <div class="max-w-4xl mx-auto px-4 sm:px-6">
         <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-slate-200">
@@ -335,7 +296,7 @@
       </div>
     </section>
 
-    <!-- Section: צור קשר (#contact) -->
+    <!-- Contact Section -->
     <section id="contact" class="scroll-target py-16 sm:py-24 bg-white border-t border-slate-200">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
         <h2 class="text-3xl sm:text-4xl font-bold font-display text-brand-navy mb-4">
@@ -345,7 +306,7 @@
           השאירו פרטים ונחזור אליכם לשיחת היכרות ואבחון צרכים ראשונית ללא התחייבות
         </p>
 
-        <form class="space-y-4 text-right max-w-xl mx-auto" onsubmit="event.preventDefault(); document.getElementById('contactMsg').classList.remove('hidden'); this.reset();">
+        <form class="space-y-4 text-right max-w-xl mx-auto" onsubmit="event.preventDefault(); alert('הפרטים נשלחו בהצלחה! ניצור עמכם קשר בהקדם.');">
           <div>
             <label class="block text-sm font-semibold text-slate-700 mb-1">שם מלא</label>
             <input type="text" required placeholder="ישראל ישראלי" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-blue" />
@@ -366,10 +327,6 @@
             שליחת פנייה לשיחת אבחון
           </button>
         </form>
-
-        <div id="contactMsg" class="hidden mt-4 p-3 bg-emerald-50 text-emerald-800 rounded-xl text-center font-medium">
-          הפנייה נשלחה בהצלחה! ניצור קשר בהקדם.
-        </div>
       </div>
     </section>
 
