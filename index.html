@@ -47,7 +47,7 @@
       scroll-margin-top: 5.05rem;
     }
 
-    /* אנימציית תנועה חלקה אינסופית לסטריפ */
+    /* אנימציית תנועה חלקה אינסופית לסטריפ הלוגואים */
     @keyframes marquee {
       0% {
         transform: translateX(0%);
@@ -66,9 +66,9 @@
     }
   </style>
 
-  <!-- ספריות p5.js ו-Vanta TOPOLOGY לרקע קווי גובה טופוגרפיים ייחודי -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.topology.min.js"></script>
+  <!-- ספריות Three.js ו-Vanta WAVES -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
 </head>
 <body class="min-h-screen flex flex-col antialiased selection:bg-brand-lime selection:text-brand-navy relative">
 
@@ -116,7 +116,7 @@
 
   <main class="flex-grow">
     
-    <!-- Hero Section עם רקע TOPOLOGY ייחודי ומסך מלא במובייל -->
+    <!-- Hero Section עם אפקט WAVES ומסך מלא במובייל -->
     <section id="hero-section" class="relative overflow-hidden text-center min-h-[calc(100svh-5rem)] flex flex-col justify-center py-12 sm:py-24">
       <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 w-full">
         
@@ -138,7 +138,7 @@
             <div class="text-[11px] sm:text-sm font-semibold text-slate-700 leading-tight">מותאם שטח ודנ״א ארגוני</div>
           </div>
 
-          <!-- הריבוע המעודכן: FLOW חוויתי -->
+          <!-- הריבוע האמצעי: FLOW חוויתי -->
           <div class="bg-white/95 backdrop-blur-md rounded-2xl p-3 sm:p-6 shadow-sm border border-slate-200/90 transition-all hover:shadow-md">
             <div class="text-xl sm:text-4xl font-black font-display text-brand-navy mb-1 tracking-wider">FLOW</div>
             <div class="text-[11px] sm:text-sm font-semibold text-slate-700 leading-tight">חוויתי</div>
@@ -437,7 +437,7 @@
     </span>
   </a>
 
-  <!-- Scripts: תפריט מובייל + הפעלת הרקע הדינמי TOPOLOGY -->
+  <!-- Scripts: תפריט מובייל + הפעלת הרקע הדינמי Vanta WAVES -->
   <script>
     // תפריט מובייל
     const mobileBtn = document.getElementById('mobile-menu-btn');
@@ -453,10 +453,10 @@
       });
     });
 
-    // הפעלת אפקט TOPOLOGY (קווי גובה אורגניים וייחודיים)
+    // הפעלת אפקט WAVES מותאם אישית לצבעי האתר
     window.addEventListener('DOMContentLoaded', () => {
-      if (window.VANTA && window.VANTA.TOPOLOGY) {
-        window.VANTA.TOPOLOGY({
+      if (window.VANTA && window.VANTA.WAVES) {
+        window.VANTA.WAVES({
           el: "#hero-section",
           mouseControls: true,
           touchControls: true,
@@ -465,8 +465,11 @@
           minWidth: 200.00,
           scale: 1.00,
           scaleMobile: 1.00,
-          color: 0x0d3b66,           // כחול מותג אלגנטי לקווים הטופוגרפיים
-          backgroundColor: 0xeaf1f5  // גוון התכלת המקורי של האתר
+          color: 0xc8dded,           // גוון הגלים (תכלת רך ומבריק)
+          shininess: 30.00,          // ברק עדין
+          waveHeight: 18.00,         // גובה גלים מתון שלא יסתיר תוכן
+          waveSpeed: 0.65,           // זרימה רגועה ואלגנטית
+          zoom: 0.85
         });
       }
     });
