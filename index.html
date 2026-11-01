@@ -116,7 +116,7 @@
 
   <main class="flex-grow">
     
-    <!-- Hero Section עם רקע דינמי ומסך מלא במובייל -->
+    <!-- Hero Section עם רקע דינמי מפוזר ומרווח, ומסך מלא במובייל -->
     <section id="hero-section" class="relative overflow-hidden text-center min-h-[calc(100svh-5rem)] flex flex-col justify-center py-12 sm:py-24">
       <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 w-full">
         
@@ -130,7 +130,7 @@
           הכשרות פרקטיות, ממוקדות ומותאמות לשטח, שמגשרות על הפער שבין ביצוע מצטיין לניהול והובלת אנשים: במעבר מעובדים מצטיינים למנהלים מצטיינים
         </p>
 
-        <!-- 3 ריבועי נתונים בשורה אחת עם רקע מעט מוגן לקריאות -->
+        <!-- 3 ריבועי נתונים בשורה אחת -->
         <div class="grid grid-cols-3 gap-2.5 sm:gap-6 max-w-3xl mx-auto">
           
           <div class="bg-white/95 backdrop-blur-md rounded-2xl p-3 sm:p-6 shadow-sm border border-slate-200/90 transition-all hover:shadow-md">
@@ -436,7 +436,7 @@
     </span>
   </a>
 
-  <!-- Scripts: תפריט מובייל + הפעלת הרקע הדינמי -->
+  <!-- Scripts: תפריט מובייל + הפעלת הרקע הדינמי המעודכן -->
   <script>
     // תפריט מובייל
     const mobileBtn = document.getElementById('mobile-menu-btn');
@@ -452,7 +452,7 @@
       });
     });
 
-    // הפעלת רקע דינמי Vanta NET מותאם לצבעי האתר
+    // הפעלת רקע דינמי Vanta NET - מפוזר ומרווח
     window.addEventListener('DOMContentLoaded', () => {
       if (window.VANTA && window.VANTA.NET) {
         window.VANTA.NET({
@@ -464,11 +464,11 @@
           minWidth: 200.00,
           scale: 1.00,
           scaleMobile: 1.00,
-          color: 0x0ea5e9,           // כחול-טורקיז עדין לקווים והנקודות
-          backgroundColor: 0xeaf1f5, // גוון הרקע המקורי של האתר
-          points: 10.00,             // כמות נקודות מעודנת שלא תעמיס על הטקסט
-          maxDistance: 22.00,
-          spacing: 18.00
+          color: 0x0ea5e9,           // כחול-טורקיז נקי
+          backgroundColor: 0xeaf1f5, // צבע הרקע הבהיר של האתר
+          points: 7.00,              // פחות נקודות כדי למנוע צפיפות
+          maxDistance: 28.00,        // מרחק חיבור רחב יותר לפריסה על כל השטח
+          spacing: 24.00             // מרווח גדול בין הנקודות
         });
       }
     });
