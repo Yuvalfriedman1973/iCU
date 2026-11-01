@@ -65,6 +65,10 @@
       animation-play-state: paused;
     }
   </style>
+
+  <!-- ספריות Three.js ו-Vanta.js לרקע דינמי -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
 </head>
 <body class="min-h-screen flex flex-col antialiased selection:bg-brand-lime selection:text-brand-navy relative">
 
@@ -112,36 +116,36 @@
 
   <main class="flex-grow">
     
-    <!-- Hero Section -->
-    <section class="pt-12 sm:pt-20 pb-16 sm:pb-24 relative overflow-hidden text-center">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+    <!-- Hero Section עם רקע דינמי ומסך מלא במובייל -->
+    <section id="hero-section" class="relative overflow-hidden text-center min-h-[calc(100svh-5rem)] flex flex-col justify-center py-12 sm:py-24">
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 w-full">
         
         <!-- כותרת ראשית מחולקת לשתי שורות מדויקות -->
-        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black font-display text-brand-navy leading-tight tracking-tight mb-6">
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black font-display text-brand-navy leading-tight tracking-tight mb-6 drop-shadow-sm">
           <span class="block">מגדלים את דור המנהלים</span>
           <span class="block">הבא של הארגון</span>
         </h1>
         
-        <p class="text-lg sm:text-xl text-slate-700 max-w-2xl mx-auto leading-relaxed mb-10">
+        <p class="text-base sm:text-xl text-slate-800 font-medium max-w-2xl mx-auto leading-relaxed mb-8 sm:mb-12">
           הכשרות פרקטיות, ממוקדות ומותאמות לשטח, שמגשרות על הפער שבין ביצוע מצטיין לניהול והובלת אנשים: במעבר מעובדים מצטיינים למנהלים מצטיינים
         </p>
 
-        <!-- 3 ריבועי נתונים בשורה אחת -->
-        <div class="grid grid-cols-3 gap-2 sm:gap-6 max-w-3xl mx-auto">
+        <!-- 3 ריבועי נתונים בשורה אחת עם רקע מעט מוגן לקריאות -->
+        <div class="grid grid-cols-3 gap-2.5 sm:gap-6 max-w-3xl mx-auto">
           
-          <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-3 sm:p-6 shadow-sm border border-slate-200/80 transition-all hover:shadow-md">
+          <div class="bg-white/95 backdrop-blur-md rounded-2xl p-3 sm:p-6 shadow-sm border border-slate-200/90 transition-all hover:shadow-md">
             <div class="text-xl sm:text-4xl font-black font-display text-brand-navy mb-1">100%</div>
-            <div class="text-xs sm:text-sm font-medium text-slate-600">מותאם שטח ודנ״א ארגוני</div>
+            <div class="text-[11px] sm:text-sm font-semibold text-slate-700 leading-tight">מותאם שטח ודנ״א ארגוני</div>
           </div>
 
-          <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-3 sm:p-6 shadow-sm border border-slate-200/80 transition-all hover:shadow-md">
+          <div class="bg-white/95 backdrop-blur-md rounded-2xl p-3 sm:p-6 shadow-sm border border-slate-200/90 transition-all hover:shadow-md">
             <div class="text-xl sm:text-4xl font-black font-display text-brand-navy mb-1">2–0</div>
-            <div class="text-xs sm:text-sm font-medium text-slate-600">שנות ניסיון ניהולי</div>
+            <div class="text-[11px] sm:text-sm font-semibold text-slate-700 leading-tight">שנות ניסיון ניהולי</div>
           </div>
 
-          <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-3 sm:p-6 shadow-sm border border-slate-200/80 transition-all hover:shadow-md">
+          <div class="bg-white/95 backdrop-blur-md rounded-2xl p-3 sm:p-6 shadow-sm border border-slate-200/90 transition-all hover:shadow-md">
             <div class="text-xl sm:text-4xl font-black font-display text-brand-navy mb-1">פרקטי</div>
-            <div class="text-xs sm:text-sm font-medium text-slate-600">בלי תיאוריות כבדות</div>
+            <div class="text-[11px] sm:text-sm font-semibold text-slate-700 leading-tight">בלי תיאוריות כבדות</div>
           </div>
 
         </div>
@@ -153,7 +157,6 @@
     <section id="services" class="scroll-target py-16 sm:py-24 bg-[#ddf3cf] border-y border-[#cbe8bb] transition-colors duration-300">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         
-        <!-- אליפסת "סל הפתרונות" צרה ומהודקת -->
         <div class="flex justify-center mb-5">
           <div class="inline-flex items-center justify-center px-10 py-1.5 sm:py-2 rounded-full bg-white/80 backdrop-blur-md border border-white/90 shadow-md text-brand-navy font-display text-2xl sm:text-3xl font-extrabold tracking-wide">
             סל הפתרונות
@@ -166,10 +169,8 @@
           </h2>
         </div>
 
-        <!-- רשת 4 כרטיסים קומפקטיים (המספר בצד ימין צמוד לכותרת) -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           
-          <!-- Card 01 -->
           <div class="bg-white rounded-3xl p-5 sm:p-6 border border-white/60 shadow-sm flex flex-col justify-between hover:shadow-xl transition-all">
             <div>
               <div class="flex items-center gap-3 mb-4">
@@ -186,7 +187,6 @@
             </div>
           </div>
 
-          <!-- Card 02 -->
           <div class="bg-white rounded-3xl p-5 sm:p-6 border border-white/60 shadow-sm flex flex-col justify-between hover:shadow-xl transition-all">
             <div>
               <div class="flex items-center gap-3 mb-4">
@@ -203,7 +203,6 @@
             </div>
           </div>
 
-          <!-- Card 03 -->
           <div class="bg-white rounded-3xl p-5 sm:p-6 border border-white/60 shadow-sm flex flex-col justify-between hover:shadow-xl transition-all">
             <div>
               <div class="flex items-center gap-3 mb-4">
@@ -220,7 +219,6 @@
             </div>
           </div>
 
-          <!-- Card 04 -->
           <div class="bg-white rounded-3xl p-5 sm:p-6 border border-white/60 shadow-sm flex flex-col justify-between hover:shadow-xl transition-all">
             <div>
               <div class="flex items-center gap-3 mb-4">
@@ -246,7 +244,6 @@
     <section id="methodology" class="scroll-target py-16 sm:py-24 bg-brand-navy text-white text-center">
       <div class="max-w-4xl mx-auto px-4 sm:px-6">
         
-        <!-- אליפסת "המתודולוגיה" צרה ומהודקת -->
         <div class="flex justify-center mb-6">
           <div class="inline-flex items-center justify-center px-10 py-2 sm:py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg text-brand-lime font-display text-2xl sm:text-3xl font-extrabold tracking-wide">
             המתודולוגיה
@@ -322,7 +319,6 @@
       <div class="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
         <div class="animate-marquee flex items-center gap-8 sm:gap-12 py-3">
           
-          <!-- סט ראשון של כרטיסי לקוחות -->
           <div class="flex items-center gap-2.5 px-6 py-3 rounded-2xl bg-slate-50 border border-slate-200/90 text-brand-navy font-bold font-display text-base tracking-wide whitespace-nowrap hover:bg-brand-bgLight hover:border-brand-teal/40 hover:scale-105 transition-all">
             <span class="w-3 h-3 rounded-full bg-brand-teal inline-block shadow-sm"></span>
             ארגון מוביל 01
@@ -382,7 +378,6 @@
     <section id="contact" class="scroll-target py-16 sm:py-24 bg-white border-t border-slate-200">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
         
-        <!-- משפט פתיחה מוגדל ומודגש -->
         <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold font-display text-brand-navy leading-snug mb-8">
           השאירו פרטים ונחזור אליכם לשיחת היכרות ואבחון צרכים ראשונית ללא התחייבות
         </h2>
@@ -441,8 +436,9 @@
     </span>
   </a>
 
-  <!-- Script for Mobile Menu Toggle -->
+  <!-- Scripts: תפריט מובייל + הפעלת הרקע הדינמי -->
   <script>
+    // תפריט מובייל
     const mobileBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
 
@@ -454,6 +450,27 @@
       link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
       });
+    });
+
+    // הפעלת רקע דינמי Vanta NET מותאם לצבעי האתר
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.VANTA && window.VANTA.NET) {
+        window.VANTA.NET({
+          el: "#hero-section",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          color: 0x0ea5e9,           // כחול-טורקיז עדין לקווים והנקודות
+          backgroundColor: 0xeaf1f5, // גוון הרקע המקורי של האתר
+          points: 10.00,             // כמות נקודות מעודנת שלא תעמיס על הטקסט
+          maxDistance: 22.00,
+          spacing: 18.00
+        });
+      }
     });
   </script>
 
