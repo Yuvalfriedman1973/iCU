@@ -1,3 +1,9 @@
+שני העדכונים הוטמעו:
+ * הגדלת הפונט של "חוויתי": שודרג ל-text-base sm:text-lg font-bold text-brand-navy כדי שיהיה ברור, בולט וקריא מתחת ל-FLOW.
+ * אפקט הגלים (WAVES) מעודכן:
+   * משולשים קטנים וצפופים יותר: הוגדר zoom: 1.55 עם scale: 1.2 ו-scaleMobile: 1.2 שמגדילים משמעותית את כמות המשולשים והפירוט של הרשת התלת-ממדית.
+   * צבע בולט יותר וניגודי: שונה לגוון טורקיז-כחול חי ועמוק יותר (color: 0x0ea5e9), עם הגברת הברק (shininess: 45.00) ועוצמת גל (waveHeight: 22.00) שמבליטה את קווי המתאר והצללים של המשולשים.
+הנה קוד ה-HTML המלא והמעודכן להעתקה ישירה ל-GitHub Pages:
 <!DOCTYPE html>
 <html lang="he" dir="rtl" class="scroll-smooth" style="scroll-padding-top: 5.05rem;">
 <head>
@@ -116,7 +122,7 @@
 
   <main class="flex-grow">
     
-    <!-- Hero Section עם אפקט WAVES ומסך מלא במובייל -->
+    <!-- Hero Section עם אפקט WAVES משופר ומסך מלא במובייל -->
     <section id="hero-section" class="relative overflow-hidden text-center min-h-[calc(100svh-5rem)] flex flex-col justify-center py-12 sm:py-24">
       <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 w-full">
         
@@ -138,10 +144,10 @@
             <div class="text-[11px] sm:text-sm font-semibold text-slate-700 leading-tight">מותאם שטח ודנ״א ארגוני</div>
           </div>
 
-          <!-- הריבוע האמצעי: FLOW חוויתי -->
+          <!-- הריבוע האמצעי: פונט מוגדל ומודגש עבור 'חוויתי' -->
           <div class="bg-white/95 backdrop-blur-md rounded-2xl p-3 sm:p-6 shadow-sm border border-slate-200/90 transition-all hover:shadow-md">
             <div class="text-xl sm:text-4xl font-black font-display text-brand-navy mb-1 tracking-wider">FLOW</div>
-            <div class="text-[11px] sm:text-sm font-semibold text-slate-700 leading-tight">חוויתי</div>
+            <div class="text-base sm:text-lg font-bold text-brand-navy leading-tight">חוויתי</div>
           </div>
 
           <div class="bg-white/95 backdrop-blur-md rounded-2xl p-3 sm:p-6 shadow-sm border border-slate-200/90 transition-all hover:shadow-md">
@@ -437,7 +443,7 @@
     </span>
   </a>
 
-  <!-- Scripts: תפריט מובייל + הפעלת הרקע הדינמי Vanta WAVES -->
+  <!-- Scripts: תפריט מובייל + הפעלת הרקע הדינמי Vanta WAVES (משולשים צפופים ובולטים) -->
   <script>
     // תפריט מובייל
     const mobileBtn = document.getElementById('mobile-menu-btn');
@@ -453,7 +459,7 @@
       });
     });
 
-    // הפעלת אפקט WAVES מותאם אישית לצבעי האתר
+    // הפעלת אפקט WAVES מעודכן: משולשים קטנים, צפופים ובולטים יותר
     window.addEventListener('DOMContentLoaded', () => {
       if (window.VANTA && window.VANTA.WAVES) {
         window.VANTA.WAVES({
@@ -463,13 +469,13 @@
           gyroControls: false,
           minHeight: 200.00,
           minWidth: 200.00,
-          scale: 1.00,
-          scaleMobile: 1.00,
-          color: 0xc8dded,           // גוון הגלים (תכלת רך ומבריק)
-          shininess: 30.00,          // ברק עדין
-          waveHeight: 18.00,         // גובה גלים מתון שלא יסתיר תוכן
-          waveSpeed: 0.65,           // זרימה רגועה ואלגנטית
-          zoom: 0.85
+          scale: 1.20,               // רמת פירוט גבוהה
+          scaleMobile: 1.20,
+          color: 0x0ea5e9,           // כחול-טורקיז עמוק ובולט יותר
+          shininess: 45.00,          // ברק חזק המדגיש את זוויות המשולשים
+          waveHeight: 22.00,         // גובה ועומק מובחן יותר לרשת
+          waveSpeed: 0.75,           // זרימה נעימה
+          zoom: 1.55                 // זום מוגדל היוצר משולשים קטנים ורבים בהרבה
         });
       }
     });
@@ -477,3 +483,4 @@
 
 </body>
 </html>
+
